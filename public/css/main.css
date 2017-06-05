@@ -1,0 +1,59 @@
+
+body{background: url(/public/images/4.png) no-repeat;background-size:cover;font-size: 16px;}
+/*#index{*/
+    /*display:none;*/
+/*}*/
+
+/*.top-header{*/
+    /*display: none;*/
+/*}*/
+
+/*.main-content{*/
+    /*display: none;*/
+/*}*/
+
+
+.form{background: rgba(255,255,255,0.2);width:400px;margin:100px auto;}
+#login_form{display: block;}
+#register_form{display: none;}
+/*.form-horizontal.on{*/
+    /*display: block;*/
+/*}*/
+.fa{display: inline-block;top: 27px;left: 6px;position: relative;color: #ccc;}
+input[type="text"],input[type="password"]{padding-left:26px;}
+.checkbox{padding-left:21px;}
+.focus,.nav>li>a:hover, .nav>li>a:focus{
+    background:#428bca;
+    color:#fff;
+}
+
+.message h3{
+    font-size:18px;
+}
+#messageContent{
+    float: left;
+    box-sizing: border-box;
+    width:80%;
+    height:50px;
+    border:1px solid #2e6da4;
+}
+#messageBtn{
+    float:right;
+    box-sizing: border-box;
+    width:20%;
+    height:50px;
+    line-height: 50px;
+    background-color:#2e6da4;
+    border:none;
+    color:#fff;
+}
+.bgDanger{
+    width:100%;
+    margin:0 auto;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #ec971f;
+    color:#fff;
+    cursor:pointer;
+}

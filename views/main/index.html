@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% for content in contents %}
+        <a href="/view?contentid={{ content.id }}" class="list-group-item active">
+            <h4 class="list-group-item-heading">{{ content.title }}</h4>
+            <p>
+                作者：<span>{{ content.user.username }}</span> -
+                时间：<span>{{ content.addTime|date('Y年m月d日 H:i:s',-8*60) }}</span> -
+                阅读：<span>{{ content.views }}</span> -
+                评论：<span></span>
+            </p>
+            <p class="list-group-item-text">{{ content.description }}</p>
+        </a>
+    {% endfor %}
+    <ul class="pager">
+        <li class="previous">
+            {% if page <= 1 %}
+                <span>没有上一页</span>
+            {% else %}
+                <a href="/?category={{ category }}&page={{ page - 1 }}">上一页</a>
+            {% endif %}
+        </li>
+        {% if pages > 0 %}
+            <li>
+                <strong>{{ page }}/{{ pages }}</strong>
+            </li>
+        {% else %}
+        {% endif %}
+        <li class="next">
+            {% if page >= pages %}
+                <span>没有下一页</span>
+            {% else %}
+                <a href="/?category={{ category }}&page={{ page + 1 }}">下一页</a>
+            {% endif %}
+        </li>
+    </ul>
+{% endblock %}
